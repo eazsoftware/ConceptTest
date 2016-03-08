@@ -3,3 +3,18 @@
 */.settings
 */.classpath
 */.project
+/Logging/logback/target/
+/Logging/logbackweb/target/
+/Logging/logbackLevels/target/
+/Logging/logbackLevels (copy)/target/
+/Logging/logbackLevels2/target/
+/Logging/logbackLevels2 (copy)/target/
+/Logging/logbackLevelsMultiple/target/
+/Logging/logbackLevelsMultiple (copy)/target/
+/Logging/logbackLevelsAccumulate/target/
+/Logging/logbackAppendersAccumulate/target/
+/Logging/logbackAppendersAccumulate-Duplicate/target/
+/Logging/logbackAppendersAccumulate-Duplicate (copy)/target/
+/Logging/logbackAppendersAccumulate-Multiple/target/
+/Logging/logbackAppendersAccumulate-Multiple (copy)/target/
+/Logging/logbackAppendersAccumulate-AddivityFlag/target/

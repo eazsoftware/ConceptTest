@@ -1,0 +1,3 @@
+2016-03-08 18:57:28,460 INFO [main] c.e.l.MyApp3 [MyApp3.java:32] Entering application.
+2016-03-08 18:57:28,464 DEBUG [main] c.e.l.Foo [Foo.java:24] Did it again!
+2016-03-08 18:57:28,464 INFO [main] c.e.l.MyApp3 [MyApp3.java:36] Exiting application.
