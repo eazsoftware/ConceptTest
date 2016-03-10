@@ -16,10 +16,7 @@
         <module>JQueryTab</module>
         <module>Bootstrap</module>
         <module>OddEvenNumber</module>
-	<module>WebTests</module>
-    <module>Logging/logback</module>
-    <module>logback</module>
-    <module>Logging/Logging</module>
-    <module>Logging</module>
+        <module>WebTests</module>
+        <module>Logging</module>
     </modules>
 </project>

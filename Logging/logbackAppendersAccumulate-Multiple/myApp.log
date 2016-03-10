@@ -1,6 +1,0 @@
-2016-03-08 19:08:57,088 INFO [main] c.e.l.MyApp3 [MyApp3.java:32] Entering application.
-2016-03-08 19:08:57,092 DEBUG [main] c.e.l.Foo [Foo.java:24] Did it again!
-2016-03-08 19:08:57,092 INFO [main] c.e.l.MyApp3 [MyApp3.java:36] Exiting application.
-2016-03-08 19:10:23,317 INFO [main] c.e.l.MyApp3 [MyApp3.java:32] Entering application.
-2016-03-08 19:10:23,320 DEBUG [main] c.e.l.Foo [Foo.java:24] Did it again!
-2016-03-08 19:10:23,320 INFO [main] c.e.l.MyApp3 [MyApp3.java:36] Exiting application.

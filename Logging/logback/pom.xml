@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.eaz</groupId>
+        <artifactId>Logging</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     
-    <groupId>com.eaz</groupId>
     <artifactId>logback</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-    <name>1-logback</name>
+    <packaging>pom</packaging>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -15,7 +17,23 @@
         <logback.version>1.1.3</logback.version>
     </properties>
     
-    <url>http://logback.qos.ch/manual/introduction.html</url>
+    <url>http://logback.qos.ch/</url>
+    
+    <modules>
+        <module>1-logback-introduction</module>
+        <module>2-logback-configuration-web</module>
+        <module>3-logback-configuration-levels</module>
+        <module>4-logback-configuration-levels2</module>
+        <module>5-logback-configuration-levelsmultiple</module>
+        <module>6-logback-configuration-appenders-accumulate-duplicate</module>
+        <module>7-logback-configuration-appenders-accumulate-multiple</module>
+        <module>8-logback-configuration-appenders-accumulate-addivityflag</module>
+        <module>9-logback-configuration-contextname</module>
+        <module>10-logback-configuration-variables-substitution</module>
+        <module>11-logback-configuration-variables-propertiesfile</module>
+        <module>12-logback-configuration-variables-propertiesfile2</module>
+        <module>13-logback-configuration-variables-scope</module>
+    </modules>
     
     <dependencies>
         
