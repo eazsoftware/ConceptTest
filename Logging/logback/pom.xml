@@ -33,6 +33,10 @@
         <module>11-logback-configuration-variables-propertiesfile</module>
         <module>12-logback-configuration-variables-propertiesfile2</module>
         <module>13-logback-configuration-variables-scope</module>
+        <module>14-logback-appenders-consoleappender</module>
+        <module>15-logback-appenders-fileappender</module>
+        <module>16-logback-appenders-fileappender-timestamp</module>
+        <module>17-logback-appenders-rollingfileappender-rollingtimebased</module>
     </modules>
     
     <dependencies>
