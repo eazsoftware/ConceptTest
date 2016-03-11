@@ -37,6 +37,8 @@
         <module>15-logback-appenders-fileappender</module>
         <module>16-logback-appenders-fileappender-timestamp</module>
         <module>17-logback-appenders-rollingfileappender-rollingtimebased</module>
+        <module>18-logback-appenders-rollingfileappender-sizeandtime</module>
+        <module>19-logback-appenders-smtpappender-email</module>
     </modules>
     
     <dependencies>

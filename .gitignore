@@ -18,3 +18,63 @@
 /Logging/logbackAppendersAccumulate-Multiple/target/
 /Logging/logbackAppendersAccumulate-Multiple (copy)/target/
 /Logging/logbackAppendersAccumulate-AddivityFlag/target/
+/Logging/logbackAppendersAccumulate-AddivityFlag (copy)/target/
+/Logging/logbackAppenders-ContextName/target/
+/Logging/logbackAppenders-ContextName (copy)/target/
+/Logging/logbackAppenders-Variables/target/
+/Logging/logbackAppenders-VariablesSubstitution/target/
+/Logging/logbackAppenders-VariablesSubstitution (copy)/target/
+/Logging/logbackAppenders-VariablesSubstitution -PropertiesFile/target/
+/Logging/logbackAppenders-VariablesSubstitution-PropertiesFile/target/
+/Logging/logbackAppenders-VariablesSubstitution-PropertiesFile (copy)/target/
+/Logging/logbackAppenders-VariablesSubstitution-PropertiesFile2/target/
+/Logging/logbackAppenders-VariablesSubstitution-PropertiesFile2 (copy)/target/
+/Logging/logbackAppenders-VariablesSubstitution-scope/target/
+/Logging/_logback/target/
+/Logging/logback/_logback/target/
+/Logging/logback/logback-introduction/target/
+/Logging/logback/1-logback-introduction/target/
+/Logging/logback/logbackweb/target/
+/Logging/logback/2-logbackweb/target/
+/Logging/logback/3-logbackLevels/target/
+/Logging/logback/3-logback-introduction-levels/target/
+/Logging/logback/2logback-introduction-web/target/
+/Logging/logback/2-logback-introduction-web/target/
+/Logging/logback/logbackLevels2/target/
+/Logging/logback/4-logback-introduction-Levels2/target/
+/Logging/logback/4-logback-introduction-levels2/target/
+/Logging/logback/2-logback-configuration-web/target/
+/Logging/logback/3-logback-configuration-levels/target/
+/Logging/logback/4-logback-configuration-levels2/target/
+/Logging/logback/logbackLevelsMultiple/target/
+/Logging/logback/5-logback-configuration-levelsmultiple/target/
+/Logging/logback/logbackAppendersAccumulate-Duplicate/target/
+/Logging/logback/6-logback-configuration-appenders-accumulate-duplicate/target/
+/Logging/logback/logbackAppendersAccumulate-Multiple/target/
+/Logging/logback/7-logbackAppendersAccumulate-Multiple/target/
+/Logging/logback/7-logback-configuration-appenders-accumulate-multiple/target/
+/Logging/logback/logbackAppendersAccumulate-AddivityFlag/target/
+/Logging/logback/8-logback-configuration-appenders-accumulate-addivityflag/target/
+/Logging/logback/logbackAppenders-ContextName/target/
+/Logging/logback/9-logback-configuration-contextname/target/
+/Logging/logback/logbackAppenders-VariablesSubstitution/target/
+/Logging/logback/10-logback-configuration-variables-substitution/target/
+/Logging/logback/logbackAppenders-VariablesSubstitution-PropertiesFile/target/
+/Logging/logback/11-logback-configuration-variables-propertiesfile/target/
+/Logging/logback/logbackAppenders-VariablesSubstitution-PropertiesFile2/target/
+/Logging/logback/12-logback-configuration-variables-propertiesfile2/target/
+/Logging/logback/logbackAppenders-VariablesSubstitution-scope/target/
+/Logging/logback/13-logback-configuration-variables-scope/target/
+/Logging/logback/14-logback-appenders-consoleappender/target/
+/Logging/logback/14-logback-appenders-consoleappender (copy)/target/
+/Logging/logback/15-logback-appenders-fileappender/target/
+/Logging/logback/15-logback-appenders-fileappender (copy)/target/
+/Logging/logback/16-logback-appenders-fileappender-timestamp/target/
+/Logging/logback/16-logback-appenders-fileappender-timestamp (copy)/target/
+/Logging/logback/17-logback-appenders-fileappender-timestamp (copy)/target/
+/Logging/logback/17-logback-appenders-rollingfileappender-rollingtimebased/target/
+/Logging/logback/17-logback-appenders-rollingfileappender-rollingtimebased (copy)/target/
+/Logging/logback/18-logback-appenders-rollingfileappender-rollingtimebasedx/target/
+/Logging/logback/18-logback-appenders-rollingfileappender-sizeandtime/target/
+/Logging/logback/18-logback-appenders-rollingfileappender-sizeandtime (copy)/target/
+/Logging/logback/19-logback-appenders-smtpappender-email/target/
