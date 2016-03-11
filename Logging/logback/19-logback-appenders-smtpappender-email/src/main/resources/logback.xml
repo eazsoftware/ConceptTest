@@ -1,9 +1,9 @@
 <configuration>   
     <appender name="EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">
-        <smtpHost>pexsoftware.com</smtpHost>
-        <to>eptest1@pexsoftware.com</to>
-        <to>eptest2@pexsoftware.com</to> <!-- additional destinations are possible -->
-        <from>eptest3@pexsoftware.com</from>
+        <smtpHost>localhost</smtpHost>
+        <to>test1@eaz.com</to>
+        <to>test2@eaz.com</to> <!-- additional destinations are possible -->
+        <from>eptest3@eaz.com</from>
         <subject>TESTING: %logger{20} - %m</subject>
         <layout class="ch.qos.logback.classic.PatternLayout">
             <pattern>%date %-5level %logger{35} - %message%n</pattern>
