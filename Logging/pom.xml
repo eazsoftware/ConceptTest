@@ -3,12 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <groupId>com.pexsoftware</groupId>
+        <groupId>com.eaz</groupId>
         <artifactId>ConceptTest</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     
-    <groupId>com.eaz</groupId>
     <artifactId>Logging</artifactId>
     <packaging>pom</packaging>
     

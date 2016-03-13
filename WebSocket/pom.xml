@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>ConceptTest</artifactId>
-        <groupId>com.pexsoftware</groupId>
+        <groupId>com.eaz</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.pexsoftware</groupId>
+    <groupId>com.eaz</groupId>
     <artifactId>WebSocket</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>

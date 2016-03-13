@@ -1,4 +1,4 @@
-<configuration>
+<configuration debug="true">
     <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>mylog.txt</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">

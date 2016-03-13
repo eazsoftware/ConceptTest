@@ -109,7 +109,7 @@
             <form>
                 <fieldset class="ui-helper-reset">
                     <label for="tab_email">Email</label>
-                    <textarea name="tab_email" id="tab_email" class="ui-widget-content ui-corner-all">user@pexsoftware.com</textarea>
+                    <textarea name="tab_email" id="tab_email" class="ui-widget-content ui-corner-all">user@eazsoftware.com</textarea>
                 </fieldset>
             </form>
         </div>

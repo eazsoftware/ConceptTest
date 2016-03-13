@@ -3,13 +3,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.pexsoftware</groupId>
+        <groupId>com.eaz</groupId>
         <artifactId>ConceptTest</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.pexsoftware</groupId>
     <artifactId>UTFFile</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <name>UTFFile</name>
     <url>http://maven.apache.org</url>
     <build>
