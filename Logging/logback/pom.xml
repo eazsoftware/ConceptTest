@@ -39,6 +39,10 @@
         <module>17-logback-appenders-rollingfileappender-rollingtimebased</module>
         <module>18-logback-appenders-rollingfileappender-sizeandtime</module>
         <module>19-logback-appenders-smtpappender-email</module>
+        <module>20-logback-appenders-smtpappender-email-htmllayout</module>
+        <module>21-logback-appenders-smtpappender-email-triggerevent</module>
+        <module>22-logback-appenders-dbappender-connectionsource</module>
+        <module>23-logback-appenders-syslogappender</module>
     </modules>
     
     <dependencies>

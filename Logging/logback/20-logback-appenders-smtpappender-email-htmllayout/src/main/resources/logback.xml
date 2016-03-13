@@ -1,0 +1,31 @@
+<configuration debug="true">   
+    <appender name="LOG_EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">
+        <smtpHost>smtp.gmail.com</smtpHost>
+        <smtpPort>465</smtpPort>
+        <SSL>true</SSL>
+        <username>sender@gmail.com</username>
+        <password>sender-password</password>        
+        <to>receiver1@gmail.com</to>
+        <to>receiver2@gmail.com</to>  <!-- additional destinations are possible -->
+        <from>sender@gmail.com</from>
+        <subject>TESTING: %logger{20} - %m</subject>
+        <asynchronousSending>false</asynchronousSending>
+        
+        <layout class="ch.qos.logback.classic.html.HTMLLayout">
+            <pattern>%relative%thread%mdc%level%logger%msg</pattern>
+        </layout>
+        
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>     
+        
+        <cyclicBufferTracker class="ch.qos.logback.core.spi.CyclicBufferTracker">
+             <!-- send just 50 log entry per email -->
+            <bufferSize>50</bufferSize>
+        </cyclicBufferTracker>           
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="LOG_EMAIL" />
+    </root>  
+</configuration>

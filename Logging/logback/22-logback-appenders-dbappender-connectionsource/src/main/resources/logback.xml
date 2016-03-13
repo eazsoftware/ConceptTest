@@ -1,0 +1,15 @@
+<configuration debug="true">
+
+    <appender name="DB" class="ch.qos.logback.classic.db.DBAppender">
+        <connectionSource class="ch.qos.logback.core.db.DriverManagerConnectionSource">
+            <driverClass>org.postgresql.Driver</driverClass>
+            <url>jdbc:postgresql:conceptest_logback_dbappender</url>
+            <user>user</user>
+            <password>pass</password>
+        </connectionSource>
+    </appender>
+  
+    <root level="DEBUG" >
+        <appender-ref ref="DB" />
+    </root>
+</configuration>
