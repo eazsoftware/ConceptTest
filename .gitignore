@@ -78,3 +78,6 @@
 /Logging/logback/18-logback-appenders-rollingfileappender-sizeandtime/target/
 /Logging/logback/18-logback-appenders-rollingfileappender-sizeandtime (copy)/target/
 /Logging/logback/19-logback-appenders-smtpappender-email/target/
+/Logging/logback/23-logback-appenders-syslogappender/target/
+/Logging/logback/23-logback-appenders-syslogappender (copy)/target/
+/Logging/logback/24-logback-appenders-siftappender/target/

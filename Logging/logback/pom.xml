@@ -43,6 +43,7 @@
         <module>21-logback-appenders-smtpappender-email-triggerevent</module>
         <module>22-logback-appenders-dbappender-connectionsource</module>
         <module>23-logback-appenders-syslogappender</module>
+        <module>24-logback-appenders-siftappender</module>
     </modules>
     
     <dependencies>
