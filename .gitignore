@@ -81,3 +81,9 @@
 /Logging/logback/23-logback-appenders-syslogappender/target/
 /Logging/logback/23-logback-appenders-syslogappender (copy)/target/
 /Logging/logback/24-logback-appenders-siftappender/target/
+/Logging/logback/25-logback-/target/
+/Logging/logback/25-logback-encoder-patternlayoutencoder-/target/
+/Logging/logback/25-logback-encoder-patternlayoutencoder-immediateFlush/target/
+/Logging/logback/25-logback-encoder-patternlayoutencoder-immediateFlush (copy)/target/
+/Logging/logback/26-logback-layout-/target/
+/Logging/logback/26-logback-layout-patternlayout-patternsample/target/

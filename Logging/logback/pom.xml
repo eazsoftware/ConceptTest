@@ -44,6 +44,8 @@
         <module>22-logback-appenders-dbappender-connectionsource</module>
         <module>23-logback-appenders-syslogappender</module>
         <module>24-logback-appenders-siftappender</module>
+        <module>25-logback-encoder-patternlayoutencoder-immediateFlush</module>
+        <module>26-logback-layout-patternlayout-patternsample</module>
     </modules>
     
     <dependencies>
