@@ -46,6 +46,7 @@
         <module>24-logback-appenders-siftappender</module>
         <module>25-logback-encoder-patternlayoutencoder-immediateFlush</module>
         <module>26-logback-layout-patternlayout-patternsample</module>
+        <module>27-logback-layout-patternlayout-conversion</module>
     </modules>
     
     <dependencies>
