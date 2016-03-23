@@ -20,6 +20,7 @@ import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.encoder.PatternLayoutEncoder;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.ConsoleAppender;
+import org.slf4j.MDC;
 
 public class ConversionSample {
 
@@ -82,7 +83,82 @@ public class ConversionSample {
         rootLogger.info("---> thread <---");
         printLog(rootLogger, "%thread: %message%n");
         //mdc, X
+        rootLogger.info("---> mdc <---");
+        MDC.put("userid", "Alice");
+        printLog(rootLogger, "%mdc: %message%n");
+        MDC.clear();
+        // exception, throwable, ex
+        rootLogger.info("---> exception <---");
+        try {
+            throwException();
+        } catch (Exception e) {
+            printLog(rootLogger, "%exception%n", e);
+            printLog(rootLogger, "%exception{short}%n", e);
+            printLog(rootLogger, "%exception{full}%n", e);
+            printLog(rootLogger, "%exception{2}%n", e);
+            //With evaluator
+            printLog(rootLogger, "%exception{full, EX_DISPLAY_EVAL}%n", e); //requires the Janino library
+        }
+        // xException, xThrowable, xEx
+        rootLogger.info("---> xException <---");
+        try {
+            throwException("Logback rulez");
+        } catch (Exception e) {
+            printLog(rootLogger, "%xException%n", e);
+            printLog(rootLogger, "%xException{short}%n", e);
+            printLog(rootLogger, "%xException{full}%n", e);
+            printLog(rootLogger, "%xException{2}%n", e);
+            //With evaluator
+            printLog(rootLogger, "%xException{full, EX_DISPLAY_EVAL}%n", e);
+        }
+        // nopexception, nopex
+        rootLogger.info("---> nopexception <---");
+        try {
+            throwException();
+        } catch (Exception e) {
+            printLog(rootLogger, "%nopexception%n", e); //Nothing to print out
+        }
+        // marker
+        rootLogger.info("---> marker <---");
+        printLog(rootLogger, "%marker: %message%n");
+        // property
+        rootLogger.info("---> property <---");
+        printLog(rootLogger, "%property{USER_HOME}: %message%n");
+        // replace
+        rootLogger.info("---> replace <---");
+        printLog(rootLogger, "%replace(%message){'\\d', 'xxx'}%n"); //Replace any number by 'xxx'
+        // rootException, rEx
+        rootLogger.info("---> rootException <---");
+        try {
+            throwException("Root Exception");
+        } catch (Exception e) {
+            printLog(rootLogger, "%rootException%n", e);
+            printLog(rootLogger, "%rootException{short}%n", e);
+            printLog(rootLogger, "%rootException{full}%n", e);
+            printLog(rootLogger, "%rootException{2}%n", e);
+            //With evaluator
+            printLog(rootLogger, "%xException{rootException, EX_DISPLAY_EVAL}%n", e);
+        }
 
+    }
+
+    protected static void printLog(Logger rootLogger, String strPattern, Exception exception) {
+        LoggerContext loggerContext = rootLogger.getLoggerContext();
+        loggerContext.reset();
+
+        PatternLayoutEncoder encoder = new PatternLayoutEncoder();
+        encoder.setContext(loggerContext);
+        encoder.setPattern(strPattern);
+        encoder.start();
+
+        ConsoleAppender<ILoggingEvent> appender = new ConsoleAppender<>();
+        appender.setContext(loggerContext);
+        appender.setEncoder(encoder);
+        appender.start();
+
+        rootLogger.addAppender(appender);
+
+        rootLogger.error("Message 5 - Error", exception);
     }
 
     protected static void printLog(Logger rootLogger, String strPattern) {
@@ -107,5 +183,13 @@ public class ConversionSample {
         rootLogger.warn("Message 4 - Warn");
         rootLogger.error("Message 5 - Error");
     }
-            
+
+    protected static void throwException() throws Exception {
+        new LogbackConversionException();
+    }
+
+    protected static void throwException(String strMessage) throws Exception {
+        new LogbackConversionException(strMessage);
+    }    
+    
 }

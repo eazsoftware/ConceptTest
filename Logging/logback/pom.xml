@@ -47,6 +47,10 @@
         <module>25-logback-encoder-patternlayoutencoder-immediateFlush</module>
         <module>26-logback-layout-patternlayout-patternsample</module>
         <module>27-logback-layout-patternlayout-conversion</module>
+        <module>28-logback-layout-evaluator</module>
+        <module>29-logback-layout-eventevaluator</module>
+        <module>30-logback-layout-htmllayout</module>
+        <module>31-logback-layout-xmllayout</module>
     </modules>
     
     <dependencies>

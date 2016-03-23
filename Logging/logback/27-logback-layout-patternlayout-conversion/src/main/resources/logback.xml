@@ -1,5 +1,12 @@
 <configuration>
 
+    <property name="USER_HOME" scope="context" value="/home/javier" />
+    
+    <!-- requires the Janino library. -->
+    <evaluator name="EX_DISPLAY_EVAL"> 
+        <expression>logger.contains("com.eaz.logback.layout.patternlayout.conversion") &amp;&amp; message.contains("Logback rulez")</expression>
+    </evaluator>    
+    
     <root level="DEBUG">        
     </root>
   

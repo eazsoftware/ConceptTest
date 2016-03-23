@@ -90,3 +90,12 @@
 /Logging/logback/26-logback-layout-patternlayout-patternsample (copy)/target/
 /Logging/logback/27-logback-layout-patternlayout-/target/
 /Logging/logback/27-logback-layout-patternlayout-conversion/target/
+/Logging/logback/27-logback-layout-patternlayout-conversion (copy)/target/
+/Logging/logback/28-logback-layout-patternlayout-conversion (/target/
+/Logging/logback/28-logback-layout-evaluator/target/
+/Logging/logback/28-logback-layout-evaluator (copy)/target/
+/Logging/logback/29-logback-layout-eventevaluator/target/
+/Logging/logback/29-logback-layout-eventevaluator (copy)/target/
+/Logging/logback/30-logback-layout-htmllayout/target/
+/Logging/logback/30-logback-layout-htmllayout (copy)/target/
+/Logging/logback/31-logback-layout-xmllayout/target/
