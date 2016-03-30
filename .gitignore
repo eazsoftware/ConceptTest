@@ -99,3 +99,23 @@
 /Logging/logback/30-logback-layout-htmllayout/target/
 /Logging/logback/30-logback-layout-htmllayout (copy)/target/
 /Logging/logback/31-logback-layout-xmllayout/target/
+/Logging/logback/20-logback-appenders-smtpappender-email-htmllayout/target/
+/Logging/logback/21-logback-appenders-smtpappender-email-triggerevent/target/
+/Logging/logback/22-logback-appenders-dbappender-connectionsource/target/
+/Logging/logback/31-logback-layout-xmllayout (copy)/target/
+/Logging/logback/32-logback-filter-ownfilter/target/
+/Logging/logback/32-logback-filter-ownfilter (copy)/target/
+/Logging/logback/33-logback-filter-levelfilter/target/
+/Logging/logback/33-logback-filter-levelfilter (copy)/target/
+/Logging/logback/34-logback-filter-thresholdfilter/target/
+/Logging/logback/34-logback-filter-thresholdfilter (copy)/target/
+/Logging/logback/35-logback-filter-evaluatorfilter-/target/
+/Logging/logback/35-logback-filter-evaluatorfilter-geventevaluator/target/
+/Logging/logback/35-logback-filter-evaluatorfilter-geventevaluator (copy)/target/
+/Logging/logback/36-logback-filter-evaluatorfilter-janinoeventevaluator/target/
+/Logging/logback/36-logback-filter-evaluatorfilter-janinoeventevaluator-basic/target/
+/Logging/logback/36-logback-filter-evaluatorfilter-janinoeventevaluator-basic (copy)/target/
+/Logging/logback/37-logback-filter-evaluatorfilter-janinoeventevaluator-/target/
+/Logging/logback/37-logback-filter-evaluatorfilter-janinoeventevaluator-basicEventEvaluator/target/
+/Logging/logback/37-logback-filter-evaluatorfilter-janinoeventevaluator-basicEventEvaluator (copy)/target/
+/Logging/logback/38-logback-filter-evaluatorfilter-janinoeventevaluator-javablock/target/

@@ -51,6 +51,13 @@
         <module>29-logback-layout-eventevaluator</module>
         <module>30-logback-layout-htmllayout</module>
         <module>31-logback-layout-xmllayout</module>
+        <module>32-logback-filter-ownfilter</module>
+        <module>33-logback-filter-levelfilter</module>
+        <module>34-logback-filter-thresholdfilter</module>
+        <module>35-logback-filter-evaluatorfilter-geventevaluator</module>
+        <module>36-logback-filter-evaluatorfilter-janinoeventevaluator-basic</module>
+        <module>37-logback-filter-evaluatorfilter-janinoeventevaluator-basicEventEvaluator</module>
+        <module>38-logback-filter-evaluatorfilter-janinoeventevaluator-javablock</module>
     </modules>
     
     <dependencies>
