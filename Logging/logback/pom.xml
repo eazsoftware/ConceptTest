@@ -58,6 +58,8 @@
         <module>36-logback-filter-evaluatorfilter-janinoeventevaluator-basic</module>
         <module>37-logback-filter-evaluatorfilter-janinoeventevaluator-basicEventEvaluator</module>
         <module>38-logback-filter-evaluatorfilter-janinoeventevaluator-javablock</module>
+        <module>39-logback-filter-matcher</module>
+        <module>40-logback-filter-counterfilter</module>
     </modules>
     
     <dependencies>
