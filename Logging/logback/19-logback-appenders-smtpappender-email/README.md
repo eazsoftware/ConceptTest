@@ -23,7 +23,7 @@ Building 19-logback-appenders-smtpappender-email 1.0-SNAPSHOT
 --- exec-maven-plugin:1.2.1:exec (default-cli) @ 19-logback-appenders-smtpappender-email ---
 15:59:36,607 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
 15:59:36,608 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-15:59:36,608 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/home/javier/projects/ConceptTest/Logging/logback/19-logback-appenders-smtpappender-email/target/classes/logback.xml]
+15:59:36,608 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/ConceptTest/Logging/logback/19-logback-appenders-smtpappender-email/target/classes/logback.xml]
 15:59:36,807 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.classic.net.SMTPAppender]
 15:59:36,831 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [LOG_EMAIL]
 15:59:37,090 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to TRACE
@@ -31,7 +31,7 @@ Building 19-logback-appenders-smtpappender-email 1.0-SNAPSHOT
 15:59:37,092 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
 15:59:37,095 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@1e9e725a - Registering current configuration as safe fallback point
 15:59:39,118 |-INFO in ch.qos.logback.classic.net.SMTPAppender[LOG_EMAIL] - SMTPAppender [LOG_EMAIL] is tracking [1] buffers
-15:59:46,217 |-INFO in ch.qos.logback.classic.net.SMTPAppender[LOG_EMAIL] - About to send out SMTP message "TESTING: c.e.l.a.email.EMail - message" to [xiulturambar@gmail.com, vallejosleiva@gmail.com]
+15:59:46,217 |-INFO in ch.qos.logback.classic.net.SMTPAppender[LOG_EMAIL] - About to send out SMTP message "TESTING: c.e.l.a.email.EMail - message" to [xx1@gmail.com, xx2@gmail.com]
 15:59:47,339 |-ERROR in ch.qos.logback.classic.net.SMTPAppender[LOG_EMAIL] - Error occurred while sending e-mail notification. javax.mail.AuthenticationFailedException: 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbsP
 534-5.7.14 sWceT-XXiuDuz9JRqyQHbUOUIPriug5_WvfwaBHDVUVCFIBjsEIOfZXaAw_R5nvRvktVLv
 534-5.7.14 AXKnqxZm0N7purx9Rhfab1njPSwajCmzpjb44DmrpPlN8MvxWj9lfUNJ9zt5cXQRxtmp32
