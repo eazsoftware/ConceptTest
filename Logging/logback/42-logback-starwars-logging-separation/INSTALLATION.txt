@@ -1,0 +1,40 @@
+
+Given that this project's goal is to illustrate logging separation in
+presence of shared libraries located on a shared class path, the
+following artifacts must be placed in the common class path of your
+web-server. 
+
+All required dependencies will be injected via Maven
+
+Enabling ContextJNDISelector
+============================
+
+To enable ContextJNDISelector you need to add 
+
+  JAVA_OPTS="$JAVA_OPTS -Dlogback.ContextSelector=JNDI"
+
+to Tomcat's catalina.sh script, or
+
+copy provided 'setenv.sh' file into <TOMCAT7_INSTALLATION>/bin
+
+Location of logback.xml
+=======================
+
+By default, if a context is named foobar, ContextJNDISelector will
+configure the the logging context for fooback from a file named
+logback-foobar.xml. To keep things simple, we assume you override this
+convention so that all context will use the same configuration
+file. Here the snippet you should place in each web-applications
+web/xml file:
+
+<env-entry>
+  <env-entry-name>logback/configuration-resource</env-entry-name>
+  <env-entry-type>java.lang.String</env-entry-type>
+  <env-entry-value>logback.xml</env-entry-value>
+</env-entry>
+
+The provided logback.xml file (along with 'setenv.sh') should then be placed under <TOMCAT7_INSTALLATION>/lib.
+
+
+
+

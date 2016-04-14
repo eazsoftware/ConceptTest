@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+    <appender name="CON" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>JNDI-KENOBI %d %-5level %msg %logger{50}%n</Pattern>
+        </layout>
+    </appender>
+  
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>testFile.log</file>
+        <append>true</append>
+        <!-- encoders are assigned the type
+        ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>JNDI-KENOBI %d %-5level %msg %logger{50}%n</pattern>
+        </encoder>
+    </appender>   
+
+    <root level="DEBUG">
+        <appender-ref ref="CON" />
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>

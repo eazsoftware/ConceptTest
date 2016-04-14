@@ -1,0 +1,24 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.eaz.starwars</groupId>
+    <version>1.0-SNAPSHOT</version>
+    <artifactId>42-logback-starwars-logging-separation-parent</artifactId>
+    <packaging>pom</packaging>
+
+    <name>42-logback-starwars-logging-separation-parent</name>
+    <modules>
+        <module>shared</module>
+        <module>kenobi</module>
+        <module>yoda</module>
+    </modules>
+  
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <logback.version>1.1.3</logback.version>
+        <slf4j.version>1.7.12</slf4j.version>
+    </properties>  
+  
+</project>

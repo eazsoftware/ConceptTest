@@ -60,6 +60,10 @@
         <module>38-logback-filter-evaluatorfilter-janinoeventevaluator-javablock</module>
         <module>39-logback-filter-matcher</module>
         <module>40-logback-filter-counterfilter</module>
+        <module>41-logback-mdc-simple</module>
+        <module>42-logback-mdc-advanced</module>
+        <module>43-logback-starwars-logging-separation</module>
+        <module>42-logback-starwars-logging-separation</module>
     </modules>
     
     <dependencies>

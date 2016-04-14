@@ -123,3 +123,8 @@
 /Logging/logback/39-logback-filter-matcher/target/
 /Logging/logback/39-logback-filter-matcher (copy)/target/
 /Logging/logback/40-logback-filter-counterfilter/target/
+/Logging/logback/40-logback-filter-counterfilter (copy)/target/
+/Logging/logback/41-logback-filter-counterfilter (copy)/target/
+/Logging/logback/41-logback-mdc-simple/target/
+/Logging/logback/41-logback-mdc-simple (copy)/target/
+/Logging/logback/42-logback-mdc-advanced/target/

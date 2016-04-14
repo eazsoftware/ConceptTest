@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="true">
+
+    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />  
+
+    <appender name="CON" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>JNDI-STARWARS cn=%contextName %d %-5level %msg %logger{50}%n</Pattern>
+        </layout>
+    </appender>
+  
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>/opt/tomcat/logs/starwars.log</file>
+        <append>true</append>
+        <!-- encoders are assigned the type
+        ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>JNDI-STARWARS cn=%contextName %d %-5level %msg %logger{50}%n</pattern>
+        </encoder>
+    </appender>   
+    
+    <appender name="SIFT" class="ch.qos.logback.classic.sift.SiftingAppender">
+        <discriminator class="ch.qos.logback.classic.sift.JNDIBasedContextDiscriminator">
+            <defaultValue>unknown</defaultValue>
+        </discriminator>
+        <sift>
+            <appender name="FILE-${contextName}" class="ch.qos.logback.core.FileAppender">
+                <file>/opt/tomcat/logs/${contextName}.log</file>
+                <prudent>true</prudent>
+                <encoder>
+                    <pattern>JNDI cn=%contextName %d %-5level %msg %logger{50}%n</pattern>
+                </encoder>
+            </appender>
+        </sift>
+    </appender>    
+
+    <root level="DEBUG">
+        <appender-ref ref="CON" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="SIFT" />
+    </root>
+
+</configuration>
