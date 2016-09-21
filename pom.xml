@@ -18,6 +18,8 @@
         <module>OddEvenNumber</module>
         <module>Logging</module>
         <module>Mocking</module>
+        <module>StringUtils</module>
+        <module>BigDecimal</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
