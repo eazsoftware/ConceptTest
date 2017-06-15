@@ -128,3 +128,12 @@
 /Logging/logback/41-logback-mdc-simple/target/
 /Logging/logback/41-logback-mdc-simple (copy)/target/
 /Logging/logback/42-logback-mdc-advanced/target/
+/webservices/vertx/first-vertx-app/target/
+/webservices/vertx/first-vertx-app (copy)/target/
+/webservices/vertx/vertx-app-with-rest (copy)/target/
+/webservices/vertx/vertx-app-with-rest/target/
+/webservices/vertx/vertx-app-with-rest-and-test/target/
+/webservices/vertx/vertx-app-with-rest-and-test (copy)/target/
+/webservices/vertx/vertx-app-with-rest-and-test-and-asynchronous-sql-client/target/
+/webservices/vertx/vertx-app-with-rest-and-test-and-asynchronous-sql-client (copy)/target/
+/webservices/vertx/vertx-app-with-rest-and-test-and-mongodb/target/

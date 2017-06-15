@@ -20,6 +20,7 @@
         <module>Mocking</module>
         <module>StringUtils</module>
         <module>BigDecimal</module>
+        <module>webservices</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
