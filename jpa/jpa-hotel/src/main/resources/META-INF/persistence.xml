@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="jpa-hotel-pu" transaction-type="RESOURCE_LOCAL">
+    <!-- Persistence provider -->
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <!-- Entity classes -->
+    <class>com.eaz.jpa.hotel.model.Permission</class>
+    <!--        <class>com.eaz.jpa.hotel.model.RoomFeature</class>
+        <class>com.eaz.jpa.hotel.model.Settings</class>
+        <class>com.eaz.jpa.hotel.model.Area</class>
+        <class>com.eaz.jpa.hotel.model.RoomStatus</class>
+        <class>com.eaz.jpa.hotel.model.Contactable</class>
+
+        <class>com.eaz.jpa.hotel.model.Room</class>
+        <class>com.eaz.jpa.hotel.model.UserStatus</class>
+        <class>com.eaz.jpa.hotel.model.Booking</class>
+        <class>com.eaz.jpa.hotel.model.Person</class>
+        <class>com.eaz.jpa.hotel.model.RoomType</class>
+        <class>com.eaz.jpa.hotel.model.UserType</class>
+        <class>com.eaz.jpa.hotel.model.User</class>
+        <class>com.eaz.jpa.hotel.model.RoomFeatureType</class>
+        <class>com.eaz.jpa.hotel.model.AvailabilityPeriod</class>
+        <class>com.eaz.jpa.hotel.model.EmailTemplate</class>
+        <class>com.eaz.jpa.hotel.model.Company</class>-->
+    <properties>
+      <!-- The JDBC URL to the database instance -->
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa_hotel?useSSL=false&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
+      <!-- The database username -->
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <!-- The database password -->
+      <property name="javax.persistence.jdbc.password" value="root"/>
+    </properties>
+  </persistence-unit>
+</persistence>

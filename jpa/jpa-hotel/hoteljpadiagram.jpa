@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="com.eaz.jpa.hotel.model" v="4.4" rws="_15043764705522" Pws="_15043764705522" cws="_15043764705522" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_15043764705521" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:mapped-superclass compositePrimaryKeyClass="HotelBaseEntityPK" abs="false" class="HotelBaseEntity" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504383035878">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:id attribute-type="String" v="true" xvt="" name="id" ft="false" id="_150438304821545">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255"/>
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+        </jpa:attributes>
+    </jpa:mapped-superclass>
+    <jpa:entity compositePrimaryKeyClass="RoomPK" abs="false" class="Room" superclassId="_1504383035878" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504376503566">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_150437789848612">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1504377982310" v="true" xvt="" name="roomType" id="_150437853090341">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-one>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1504387023067" v="true" xvt="" name="area" id="_1504394095466253">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:one-to-one>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Room.findAll">
+            <jpa:query>Select e from Room e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Room.findByName">
+            <jpa:query>Select r from Room r where r.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Room.findByLocation">
+            <jpa:query>Select r from Room r where r.location=:location</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="RoomTypePK" abs="true" class="RoomType" superclassId="_1504383035878" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504377982310">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="code" id="_1504389057131112">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_150437824182827">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:basic>
+            <jpa:one-to-many orp="false" own="true" collection-type="java.util.List" connected-entity-id="_1504378172820" v="true" xvt="" name="roomFeatures" id="_150437842768436">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-many>
+        </jpa:attributes>
+        <jpa:nq e="false" name="RoomType.findAll">
+            <jpa:query>Select e from RoomType e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="RoomType.findByName">
+            <jpa:query>Select r from RoomType r where r.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="RoomType.findByCode">
+            <jpa:query>Select r from RoomType r where r.code=:code</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="RoomType.findByAttribute1">
+            <jpa:query>Select r from RoomType r where r.attribute1=:attribute1</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="RoomFeaturePK" abs="false" class="RoomFeature" superclassId="_1504383035878" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504378172820">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_150437827430929">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="pictureUrl" id="_150437827708630">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="description" id="_150437848792038">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" v="true" xvt="" name="position" id="_150437849612939">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1504378295581" v="true" xvt="" name="roomFeatureType" id="_1504394290492264">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:one-to-one>
+        </jpa:attributes>
+        <jpa:nq e="false" name="RoomFeature.findAll">
+            <jpa:query>Select e from RoomFeature e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="RoomFeature.findByName">
+            <jpa:query>Select r from RoomFeature r where r.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="RoomFeature.findByPictureUrl">
+            <jpa:query>Select r from RoomFeature r where r.pictureUrl=:pictureUrl</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="RoomFeature.findByDescription">
+            <jpa:query>Select r from RoomFeature r where r.description=:description</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="RoomFeature.findByPosition">
+            <jpa:query>Select r from RoomFeature r where r.position=:position</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="RoomFeature.findByCode">
+            <jpa:query>Select r from RoomFeature r where r.code=:code</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="RoomFeatureTypePK" abs="false" class="RoomFeatureType" superclassId="_1504383035878" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504378295581">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="code" id="_150438744046379">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_150438745597580">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="RoomFeatureType.findAll">
+            <jpa:query>Select e from RoomFeatureType e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="RoomFeatureType.findByCode">
+            <jpa:query>Select r from RoomFeatureType r where r.code=:code</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="RoomFeatureType.findByName">
+            <jpa:query>Select r from RoomFeatureType r where r.name=:name</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ContactablePK" abs="true" class="Contactable" superclassId="_1504383035878" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504383135249">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="email" id="_150438316916649">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="phoneMobile" id="_150438320244750">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="phoneLandline" id="_150438320920451">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Contactable.findAll">
+            <jpa:query>Select e from Contactable e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Contactable.findByEmail">
+            <jpa:query>Select c from Contactable c where c.email=:email</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Contactable.findByPhoneMobile">
+            <jpa:query>Select c from Contactable c where c.phoneMobile=:phoneMobile</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Contactable.findByPhoneLandline">
+            <jpa:query>Select c from Contactable c where c.phoneLandline=:phoneLandline</jpa:query>
+        </jpa:nq>
+        <jpa:discriminator-column/>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="UserPK" abs="false" class="User" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504383334186">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" xvt="" name="password" ft="true" id="_150438339540554">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="salt" id="_150438852235494">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" v="true" xvt="" name="level" ft="false" id="_150438633557049">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" precision="0"/>
+            </jpa:basic>
+            <jpa:one-to-many orp="false" own="true" collection-type="java.util.List" connected-entity-id="_1504385995406" v="true" xvt="" name="userTypes" id="_150438631324748">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:one-to-many>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1504383135249" v="true" xvt="" name="contactable" id="_1504394205721259">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-one>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1504385864549" v="true" xvt="" name="userStatus" id="_1504394194284258">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:one-to-one>
+            <jpa:id attribute-type="String" v="true" xvt="" name="username" ft="false" id="_150438333422352">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:column unique="true" nullable="false" insertable="true" updatable="true" length="255"/>
+                <jpa:generated-value/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="User.findAll">
+            <jpa:query>Select e from User e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="User.findByPassword">
+            <jpa:query>Select u from User u where u.password=:password</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="User.findByLevel">
+            <jpa:query>Select u from User u where u.level=:level</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="User.findBySalt">
+            <jpa:query>Select u from User u where u.salt=:salt</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="PersonPK" abs="false" class="Person" superclassId="_1504383135249" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504383428399">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="firstName" id="_150438352191860">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="middleName" id="_150438352658261">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="lastName" id="_150438353085862">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="dateOfBirth" id="_150438354041063">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Person.findAll">
+            <jpa:query>Select e from Person e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Person.findByFirstName">
+            <jpa:query>Select p from Person p where p.firstName=:firstName</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Person.findByMiddleName">
+            <jpa:query>Select p from Person p where p.middleName=:middleName</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Person.findByLastName">
+            <jpa:query>Select p from Person p where p.lastName=:lastName</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Person.findByDateOfBirth">
+            <jpa:query>Select p from Person p where p.dateOfBirth=:dateOfBirth</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="CompanyPK" abs="false" class="Company" superclassId="_1504383135249" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504383455035">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_150438348370159">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Company.findAll">
+            <jpa:query>Select e from Company e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Company.findByName">
+            <jpa:query>Select c from Company c where c.name=:name</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="UserStatusPK" abs="true" class="UserStatus" superclassId="_1504383135249" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504385864549">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_150438588365632">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="code" id="_150438588913533">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="UserStatus.findAll">
+            <jpa:query>Select e from UserStatus e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="UserStatus.findByName">
+            <jpa:query>Select u from UserStatus u where u.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="UserStatus.findByCode">
+            <jpa:query>Select u from UserStatus u where u.code=:code</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="UserTypePK" abs="false" class="UserType" superclassId="_1504383135249" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504385995406">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="code" ft="true" id="_150438605478939">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" ft="true" id="_150438605766140">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:one-to-many orp="false" own="true" collection-type="java.util.List" connected-entity-id="_1504386156318" v="true" xvt="" name="permissions" id="_150438638990952">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-many>
+        </jpa:attributes>
+        <jpa:nq e="false" name="UserType.findAll">
+            <jpa:query>Select e from UserType e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="UserType.findByCode">
+            <jpa:query>Select u from UserType u where u.code=:code</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="UserType.findByName">
+            <jpa:query>Select u from UserType u where u.name=:name</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="PermissionPK" abs="false" class="Permission" superclassId="_1504383035878" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504386156318">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="code" id="_150438618840644">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_150438619164145">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" v="true" xvt="" name="level" id="_150438619176946">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Permission.findAll">
+            <jpa:query>Select e from Permission e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Permission.findByCode">
+            <jpa:query>Select e from Permission e where e.code=:code</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Permission.findByName">
+            <jpa:query>Select e from Permission e where e.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Permission.findByLevel">
+            <jpa:query>Select e from Permission e where e.level=:level</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="BookingPK" abs="false" class="Booking" superclassId="_1504383035878" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504386458493">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="notes" id="_150438653101357">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="startDate" id="_1504389266691122">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="endDate" id="_1504389272327123">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.math.BigDecimal" v="true" xvt="" name="price" id="_1504389368565132">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1504386814221" v="true" xvt="" name="availabilityPeriod" id="_1504394237578261">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:one-to-one>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1504376503566" v="true" xvt="" name="room" id="_1504394253947262">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:one-to-one>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1504383334186" v="true" xvt="" name="user" id="_1504394275907263">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:one-to-one>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Booking.findAll">
+            <jpa:query>Select e from Booking e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Booking.findByNotes">
+            <jpa:query>Select b from Booking b where b.notes=:notes</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Booking.findByStartDate">
+            <jpa:query>Select b from Booking b where b.startDate=:startDate</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Booking.findByEndDate">
+            <jpa:query>Select b from Booking b where b.endDate=:endDate</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Booking.findByPrice">
+            <jpa:query>Select b from Booking b where b.price=:price</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="SettingsPK" abs="false" class="Settings" superclassId="_1504383035878" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504386789551">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:one-to-many orp="false" own="true" collection-type="java.util.List" connected-entity-id="_1504386814221" v="true" xvt="" name="availabilityPeriods" id="_150438737763874">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-many>
+            <jpa:one-to-many orp="false" own="true" collection-type="java.util.List" connected-entity-id="_1504389476376" v="true" xvt="" name="emailTemplates" id="_1504389594276144">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-many>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Settings.findAll">
+            <jpa:query>Select e from Settings e</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="AvailabilityPeriodPK" abs="false" class="AvailabilityPeriod" superclassId="_1504383035878" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504386814221">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic optional="true" attribute-type="String" v="true" xvt="" name="code" ft="false" id="_150438732953172">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" ft="false" id="_150438733378373">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" v="true" xvt="" name="startDate" id="_150438739907376">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" v="true" xvt="" name="endDate" id="_150438740760177">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.math.BigDecimal" v="true" xvt="" name="rate" id="_150438821948489">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="AvailabilityPeriod.findAll">
+            <jpa:query>Select e from AvailabilityPeriod e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="AvailabilityPeriod.findByCode">
+            <jpa:query>Select a from AvailabilityPeriod a where a.code=:code</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="AvailabilityPeriod.findByName">
+            <jpa:query>Select a from AvailabilityPeriod a where a.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="AvailabilityPeriod.findByStartDate">
+            <jpa:query>Select a from AvailabilityPeriod a where a.startDate=:startDate</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="AvailabilityPeriod.findByEndDate">
+            <jpa:query>Select a from AvailabilityPeriod a where a.endDate=:endDate</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="AvailabilityPeriod.findByRate">
+            <jpa:query>Select a from AvailabilityPeriod a where a.rate=:rate</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="AreaPK" abs="false" class="Area" superclassId="_1504383035878" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504387023067">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="code" id="_150438710317965">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_150438710626866">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:one-to-many orp="false" own="true" collection-type="java.util.List" connected-entity-id="_1504387023067" v="true" xvt="" name="subAreas" id="_150438792955286">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-many>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1504386789551" v="true" xvt="" name="settings" id="_1504394146707255">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-one>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1504387023067" v="true" xvt="" name="parentArea" id="_1504394116030254">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:one-to-one>
+        </jpa:attributes>
+        <jpa:nq e="false" name="parentArea.findAll">
+            <jpa:query>Select e from parentArea e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="parentArea.findByCode">
+            <jpa:query>Select a from parentArea a where a.code=:code</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="parentArea.findByName">
+            <jpa:query>Select a from parentArea a where a.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="parentArea.findByAttribute1">
+            <jpa:query>Select a from parentArea a where a.attribute1=:attribute1</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="parentArea.findByParent">
+            <jpa:query>Select a from parentArea a where a.parent=:parent</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="RoomStatusPK" abs="false" class="RoomStatus" superclassId="_1504383035878" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504389129602">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="code" ft="false" id="_1504389172427118">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+                <jpa:column unique="true" nullable="false" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_1504389174995119">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="RoomStatus.findAll">
+            <jpa:query>Select e from RoomStatus e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="RoomStatus.findByCode">
+            <jpa:query>Select r from RoomStatus r where r.code=:code</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="RoomStatus.findByName">
+            <jpa:query>Select r from RoomStatus r where r.name=:name</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="EmailTemplatePK" abs="false" class="EmailTemplate" superclassId="_1504383035878" v="true" jbn="false" xre="false" m="false" rootElement="_15043764705521" id="_1504389476376">
+        <jpa:ath>javier</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="code" id="_1504389529351138">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_1504389541327139">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="content" id="_1504389548848140">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn/>
+                </jpa:bv>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="EmailTemplate.findAll">
+            <jpa:query>Select e from EmailTemplate e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="EmailTemplate.findByCode">
+            <jpa:query>Select e from EmailTemplate e where e.code=:code</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="EmailTemplate.findByName">
+            <jpa:query>Select e from EmailTemplate e where e.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="EmailTemplate.findByContent">
+            <jpa:query>Select e from EmailTemplate e where e.content=:content</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
+ * This file was generated by the Jeddict
+ */</jpa:snp>
+    <jpa:c>
+        <ct>java.util.List</ct>
+        <ct>java.util.Set</ct>
+        <ct>java.util.Map</ct>
+        <ct>java.util.Collection</ct>
+        <cit>java.util.ArrayList</cit>
+        <cit>java.util.LinkedList</cit>
+        <cit>java.util.HashSet</cit>
+        <cit>java.util.TreeSet</cit>
+        <cit>java.util.HashMap</cit>
+    </jpa:c>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_15043764705522">
+            <i ref="_1504383334186" x="675" y="222"/>
+            <i ref="_1504389129602" x="803" y="843"/>
+            <i ref="_1504386814221" x="1041" y="644"/>
+            <i ref="_1504378172820" x="1041" y="982"/>
+            <i ref="_1504383428399" x="1316" y="32"/>
+            <i ref="_1504377982310" x="803" y="473"/>
+            <i ref="_1504386458493" x="537" y="982"/>
+            <i ref="_1504383135249" x="1041" y="211"/>
+            <i ref="_1504386789551" x="32" y="644"/>
+            <i ref="_1504378295581" x="256" y="843"/>
+            <i ref="_1504385864549" x="256" y="32"/>
+            <i ref="_1504385995406" x="803" y="32"/>
+            <i ref="_1504383035878" x="537" y="644"/>
+            <i ref="_1504389476376" x="256" y="473"/>
+            <i ref="_1504376503566" x="32" y="982"/>
+            <i ref="_1504386156318" x="1533" y="211"/>
+            <i ref="_1504383455035" x="1316" y="473"/>
+            <i ref="_1504387023067" x="32" y="211"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>

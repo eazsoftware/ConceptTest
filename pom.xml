@@ -21,6 +21,10 @@
         <module>StringUtils</module>
         <module>BigDecimal</module>
         <module>webservices</module>
+        <module>jpa</module>
+        <module>java8</module>
+        <module>encryption</module>
+        <module>cron</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
