@@ -3,6 +3,7 @@
 */.settings
 */.classpath
 */.project
+*/.vertx
 /Logging/logback/target/
 /Logging/logbackweb/target/
 /Logging/logbackLevels/target/
@@ -137,3 +138,9 @@
 /webservices/vertx/vertx-app-with-rest-and-test-and-asynchronous-sql-client/target/
 /webservices/vertx/vertx-app-with-rest-and-test-and-asynchronous-sql-client (copy)/target/
 /webservices/vertx/vertx-app-with-rest-and-test-and-mongodb/target/
+/java8/java8-functions-as-objects/target/
+/java8/java8-consumer/nbproject/private/
+/java8/java8-consumer/build/
+/encryption/gpg/target/
+/cron/quartz/target/
+/jpa/jpa-hotel/target/
